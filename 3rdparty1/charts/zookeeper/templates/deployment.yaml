@@ -1,0 +1,39 @@
+{{- if .Values.enabled }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.name }}
+  namespace: {{ .Values.namespace | default .Release.Namespace }}
+  labels:
+    app: {{ .Values.name }}
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: {{ .Values.name }}
+
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.name }}
+
+    spec:
+      containers:
+      - name: zookeeper
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+
+        ports:
+        - containerPort: {{ .Values.port | default 2181 }}
+
+        env:
+        - name: ZOOKEEPER_CLIENT_PORT
+          value: {{ .Values.port | default 2181 | quote }}
+
+        - name: ZOOKEEPER_SERVER_ID
+          value: "1"
+
+        - name: ZOOKEEPER_SERVERS
+          value: "{{ .Values.name }}:2888:3888"
+{{- end }}

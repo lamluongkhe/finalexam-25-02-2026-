@@ -1,0 +1,9 @@
+dependencies:
+- name: msa
+  repository: ""
+  version: 0.1.0
+- name: msb
+  repository: ""
+  version: 0.1.0
+digest: sha256:7eef29ccde7e8ba199a630d210faee07d3a77e770691da7f96c9a51272428d8b
+generated: "2026-02-25T08:45:46.913843598+05:30"

@@ -1,0 +1,6 @@
+namespace: llkhe
+
+redis:
+  enabled: true
+  storage: 1Gi
+

@@ -1,0 +1,9 @@
+apiVersion: v2
+name: microservice
+version: 1.0.0
+
+dependencies:
+  - name: msa
+    version: 0.1.0
+  - name: msb
+    version: 0.1.0

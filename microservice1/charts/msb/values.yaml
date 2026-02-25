@@ -1,0 +1,6 @@
+enabled: true
+image: ""
+imagePullPolicy: IfNotPresent
+port: 8181
+nodePort: 30182
+redisHost: redis

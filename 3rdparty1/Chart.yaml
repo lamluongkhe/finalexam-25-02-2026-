@@ -1,0 +1,11 @@
+apiVersion: v2
+name: 3rdparty1
+version: 1.0.0
+
+dependencies:
+  - name: kafka
+    version: 0.1.0
+  - name: redis
+    version: 0.1.0
+  - name: zookeeper
+    version: 0.1.0

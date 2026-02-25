@@ -1,0 +1,9 @@
+namespace: llkhe
+  
+zookeeper:
+  enabled: true
+  name: zookeeper
+  image:
+    repository: confluentinc/cp-zookeeper
+    tag: 7.3.2
+

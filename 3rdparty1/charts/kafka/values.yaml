@@ -1,0 +1,13 @@
+enabled: true
+
+broker:
+  name: kafka-service
+  id: 1
+
+image:
+  repository: confluentinc/cp-kafka
+  tag: latest
+
+ports:
+  external: 9092
+  internal: 29092

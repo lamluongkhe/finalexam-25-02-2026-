@@ -1,0 +1,24 @@
+namespace: llkhe
+
+global:
+  kafka:
+    brokerName: kafka-service
+    internalPort: 29092
+
+msa:
+  enabled: true
+  image: "ms-a:latest"
+  imagePullPolicy: Never
+  port: 8181
+  nodePort: 30181
+  redisHost: "redis"
+  redisPort: "6379"
+
+msb:
+  enabled: true
+  image: "ms-b:latest"
+  imagePullPolicy: Never
+  port: 8181
+  nodePort: 30182
+  redisHost: "redis"
+  redisPort: "6379"

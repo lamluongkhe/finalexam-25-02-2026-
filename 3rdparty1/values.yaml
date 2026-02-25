@@ -1,0 +1,35 @@
+namespace: llkhe
+
+zookeeper:
+  enabled: true
+  name: zookeeper
+  port: 2181
+  image:
+    repository: confluentinc/cp-zookeeper
+    tag: 7.3.2
+
+kafka:
+  enabled: true
+
+  broker:
+    name: kafka-service
+    id: 1
+
+  image:
+    repository: confluentinc/cp-kafka
+    tag: 7.3.2
+
+  ports:
+    external: 9092
+    internal: 29092
+
+  zookeeper:
+    name: zookeeper
+    port: 2181
+
+  persistence:
+    size: 5Gi
+
+redis:
+  enabled: true
+  storage: 1Gi

@@ -1,0 +1,12 @@
+dependencies:
+- name: kafka
+  repository: ""
+  version: 0.1.0
+- name: redis
+  repository: ""
+  version: 0.1.0
+- name: zookeeper
+  repository: ""
+  version: 0.1.0
+digest: sha256:6e9b04dd36c040bae7fb1694b77d8c11211024ffe495234775786e6b921a3b69
+generated: "2026-02-25T12:31:21.287283292+05:30"
